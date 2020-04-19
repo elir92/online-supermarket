@@ -1,0 +1,55 @@
+<div class="col-md-6">
+    <div class="scroll">
+        <ul ng-repeat="product in cart">
+            <li>{{product.name}},  {{product.quantity}}x , Price: {{product.price | currency}}
+                <img class="order-picture" ng-src="{{product.img}}">
+            </li>
+        </ul>
+    </div>
+
+    <h2>Total Order Price: {{order_price | currency}}</h2>
+</div>
+<div ng-controller="orderCtrl">
+    <div class="col-md-6">
+        <h2>Shipping Details</h2>
+        <div class="col-md-4">
+            <form name="orderForm" novalidate>
+                <fieldset>
+                    <div class="form-group">
+                        <label>City</label>
+                        <input class="form-control" name="city" ng-model="client_details.city" type="text" value="{{client_details.city}}" ng-required="true">
+                        <div ng-show="orderForm.city.$touched && orderForm.city.$invalid">
+                            <small>Enter a valid city</small>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Street</label>
+                        <input class="form-control" name="street" ng-model="client_details.street" value="{{client_details.street}}" type="text"
+                            ng-required="true">
+                        <div ng-show="orderForm.street.$touched && orderForm.street.$invalid">
+                            <small>Enter a valid street</small>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Shipping Date</label>
+                        <input ng-model="shipdate" class="form-control ship-date" name="shipdate" type="date" ng-required="true" onchange="validShipDate()">
+                        <div ng-show="orderForm.shipdate.$touched && orderForm.shipdate.$invalid">
+                            <small>Please choose another shipping date.</small>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Credit Card Details</label>
+                        <input ng-model="payment" class="form-control" name="payment" type="text" maxlength="16" size="16" ng-required="true">
+                        <div ng-show="orderForm.payment.$touched && orderForm.payment.$invalid">
+                            <small>Enter a valid credit numbers</small>
+                        </div>
+                    </div>
+                    <input class="btn btn-lg btn-primary btn-block" type="button" ng-disabled="orderForm.$invalid" ng-click="sendOrder()" value="Order">
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div>
+        <h1>{{emptyCart}}</h1>
+    </div>
+</div>

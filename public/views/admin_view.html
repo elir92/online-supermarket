@@ -1,0 +1,73 @@
+<div>
+    <h2 style="display:inline-block;margin-right:27px;">Edit Product</h2>
+    <input class="btn btn-info btn-xs" type="button" ng-click="addForm = !addForm" value="Add New Product">
+</div>
+<form name="editForm" novalidate>
+    <fieldset>
+        <div class="form-group">
+            <label>Name:</label>
+            <input class="form-control adminForm-inputs" name="name" ng-model="edit_product" type="text" ng-required="true">
+            <div ng-show="editForm.name.$touched && editForm.name.$invalid">
+                <small>Enter name</small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Price:</label>
+            <input class="form-control adminForm-inputs" name="price" ng-model="edit_price" type="number" ng-required="true">
+            <div ng-show="editForm.price.$touched && editForm.price.$invalid">
+                <small>Enter price</small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Edit Image</label>
+            <input class="btn btn-danger btn-xs" type="button" ng-click="editImage()" value="Click">
+            <div ng-if="editImg">
+                <input class="form-control adminForm-inputs" name="image" type="file" id="editFile" ng-model="edit_image" ng-required="true">
+                <br>
+            </div>
+        </div>
+        <div class="form-group">
+               <h3>{{productCategory}}</h3>
+            </div>
+        <div class="form-group">
+            <input class="btn btn-lg btn-primary btn-block" type="button" ng-disabled="editForm.$invalid" ng-click="saveEdit()" value="Save Changes"
+                style="width:33%;">
+        </div>
+        <small>{{updateMessage}}</small>
+    </fieldset>
+</form>
+
+<div ng-show="addForm">
+    <h2>Add New Product</h2>
+    <form name="adminForm" novalidate>
+        <fieldset>
+            <div class="form-group">
+                <label>Name:</label>
+                <input class="form-control adminForm-inputs" name="name" ng-model="product_name" type="text" ng-required="true">
+                <div ng-show="adminForm.name.$touched && adminForm.name.$invalid">
+                    <small>Enter name</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Price:</label>
+                <input class="form-control adminForm-inputs" name="price" ng-model="product_price" type="number" ng-required="true">
+                <div ng-show="adminForm.price.$touched && adminForm.price.$invalid">
+                    <small>Enter price</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Category:</label>
+                <select ng-model="selectedCategory" name="category" ng-options="category.name for category in categories" ng-required="true"></select>
+            </div>
+            <div class="form-group">
+                <label>Image:</label>
+                <input class="form-control adminForm-inputs" name="image" type="file" id="myfile" ng-model="product_image">
+                <small>{{imgMessage}}</small>
+            </div>
+            <div class="form-group">
+                <input class="btn btn-lg btn-primary btn-block" type="button" ng-disabled="adminForm.$invalid" ng-click="addNewProduct()"
+                    value="Add New Product" style="width:33%;">
+            </div>
+        </fieldset>
+    </form>
+</div>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="welcomeApp" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <script src="js/welcome.js"></script>
+    <title>Online store</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Online Shop</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#!sign">
+                        <span class="glyphicon glyphicon-user"></span> Sign Up</a>
+                </li>
+                <li>
+                    <a href="#!login">
+                        <span class="glyphicon glyphicon-log-in"></span> Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div ng-view></div>
+</body>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="statusApp" lang="en">
+
+<head>
+    <title>Online-shop</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <script src="js/status.js"></script>
+    <script src="js/services/ajaxservice.js"></script>
+    <script src="js/controllers/statusctrl.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div ng-controller="statusCtrl">
+                    <h2>Thanks you for your order</h2>
+                    <div ng-repeat="order in orders">
+                        <div ng-show="$last">
+                            <ul>
+                                <li>Order Date:
+                                    <mark>{{order.date | date:"MMM d, y" }}</mark>
+                                </li>
+                                <li>Total Price:
+                                    <mark>{{order.totalprice | currency}}</mark>
+                                </li>
+                                <li>Delivery date for:
+                                    <mark>{{order.deliverydate}}</mark>
+                                </li>
+                                <li>Shipping address:
+                                    <mark>{{order.city}} , {{order.street}}</mark>
+                                </li>
+                                <li>Payment:
+                                        <mark>*************{{order.creditcard | limitTo: -4}}</mark>
+                                    </li>
+                            </ul>
+                            <label>Download order</label>
+                            <input type="button" class="btn btn-danger btn-xs" value="click here" ng-click="fetchOrderFile(order)">
+                        </div>
+                    </div>
+                    <a href="/layout.html">Back to shopping</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

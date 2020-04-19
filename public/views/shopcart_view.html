@@ -1,0 +1,27 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>QTY</th>
+            <th>Price</th>
+            <th ng-if="disable_button"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="product in cart">
+            <td>{{product.name}}</td>
+            <td>{{product.quantity}}</td>
+            <td>{{product.price | currency}}</td>
+            <td>
+                <span class="glyphicon glyphicon-remove" ng-if="disable_button" ng-click="deleteFromCart(product)"></span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<h2>Total Price : {{order_price | currency}}</h2>
+<a ng-click="disableSearch()" href="#!order">
+    <input class="btn btn-warning" type="button" value="Take an Order">
+</a>
+<input class="btn btn-danger" ng-if="disable_button" ng-click="deleteAllProducts()" type="button" value="Clean Cart">
+
+</br>

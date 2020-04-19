@@ -1,0 +1,2 @@
+{"_id":{"$oid":"5a215209e60ace06380883d2"},"username":"admin@mail.com","password":"$2a$10$qYG4QT4RgLPP3IJGoR8xJ.tzDkAxFak3QXzJGENc68y/8dR3etQai","name":"Admin","role":"admin","__v":0},
+{"_id":{"$oid":"5a5642efe53e351eb4015006"},"id":123456,"username":"test@gmail.com","password":"$2a$10$KEEH8Z7ubzEhQZtOgTpDjuk.KMfXtdOWLByMnbTZzBQeu50UVI6dK","city":"Tel-Aviv","street":"Rotchild","name":"Test","last":"Test","__v":0}

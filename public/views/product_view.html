@@ -1,0 +1,19 @@
+<div class="thumbnail">
+  <img class="img_view" ng-src="{{product.img}}">
+  <div ng-if="!admin" class="caption">
+    <label>{{product.name}}</label>
+    <h4>Price: {{product.price | currency}}</h4>
+    <input class="btn btn-success" ng-click="addProductToCart(product,quantity)" type="button" value="Add Product"> Quantity:
+    <input type="number" ng-model="quantity" name="quantity" class="proudct_quantity" min="1" max="20">
+    <small style="color:green;margin-left:5px;" ng-if="productId === product._id">{{addMessage}}</small>
+    <small style="color:red;margin-left:5px;" ng-if="productId === product._id">{{noQty}}</small>
+  </div>
+  <div ng-if="admin" class="caption">
+    <img class="img_view" ng-src="{{item.img}}">
+    <div>
+      <label>{{item.name}}</label>
+      <h4>Price: {{item.price | currency}}</h4>
+      <input class="btn btn-success" ng-click="editProduct(item)" type="button" value="Edit Product">
+    </div>
+  </div>
+</div>

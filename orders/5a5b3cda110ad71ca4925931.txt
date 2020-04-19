@@ -1,0 +1,12 @@
+Receipt number: 1002 
+ Products: 
+ Sinta Steak:2pcs
+,Pack Of Burgers:5pcs
+,Turkey Ham:3pcs
+,Sausages:5pcs
+,Fresh Milk Carton:5pcs
+,Dozen Eggs:3pcs
+,Yellow Cheese:3pcs
+,Ice Cream:5pcs
+ 
+  Price is : 84

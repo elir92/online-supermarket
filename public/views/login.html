@@ -1,0 +1,38 @@
+<div ng-controller="loginCtrl" class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Why you should by at our place</h2>
+            <p>
+                This Onlie-Shopping market was esatblished about 1 month ago, and it allows convenient buying for our customers in order
+                to save time at the super-market.
+            </p>
+            <p>
+                We also have a discounts on this site compared to our branches.
+            </p>
+            <p>
+                Make your decision, sign up today and start shopping!
+            </p>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Online Store login</h3>
+                </div>
+                <div class="panel-body">
+                    <form action="/login" method="post">
+                        <fieldset>
+                            <div class="form-group">
+                                <input class="form-control" name="username" placeholder="E-mail" type="text" required>
+                            </div>
+                            <div class="form-group">
+                                <input name="password" class="form-control" placeholder="Password" type="password" required>
+                            </div>
+                            <input class="btn btn-lg btn-primary btn-block" type="submit" value="Login">
+                        </fieldset>
+                    </form>
+                    <h3>{{loginMessage}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin');
+
+body{
+    font-family: 'Cabin', sans-serif;
+    font-size: 17px;    
+}
+
+#sign_message {
+    position: relative;
+    top: 6px;
+}
+
+.glyphicon-shopping-cart{
+    font-size: 25px;
+    top: 7px;
+}
+
+.id-user-message{
+    color: red;
+    position: relative;
+    top: 6px;
+    left: 21px;
+}
+
+.img_view{
+    max-height: 110px;
+}
+
+.logout-btn {
+    margin-top: 10px;
+    margin-right: 16px;
+}
+
+.user-welcome {
+    margin-right: 22px;
+}
+
+a:hover{
+    text-decoration:none;
+}
+
+.order-picture{
+    width: 85px;
+    height: 85px;
+}
+
+input.ng-invalid.ng-touched{
+    border:1px solid red;
+}
+
+input[disabled="disabled"]{
+    opacity: 0.4;
+    cursor: not-allowed !important;
+}
+
+.adminForm-inputs{
+    width: 35%;
+}
+
+.scroll{
+    overflow: scroll;
+    height: 370px;
+}
+
+.last-order{
+    color:blue;
+    margin-left: 5px;
+}

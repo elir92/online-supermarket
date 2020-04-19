@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html ng-app="statusApp" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <script src="js/status.js"></script>
+    <script src="js/services/ajaxservice.js"></script>
+    <script src="js/controllers/statusctrl.js"></script>
+    <script src="js/controllers/adminctrl.js"></script>
+    <title>Online store</title>
+</head>
+
+<body>
+    <div ng-controller="statusCtrl">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="">Online Shop</a>
+                    <input class="btn btn-success" ng-if="start_shop && !admin" ng-click="startShop()" type="button" value="Start Shopping" style="margin:7px;">
+                    <input class="btn btn-warning" ng-if="con_shop && !admin" ng-click="continueCart()" type="button" value="Continue Shopping"
+                        style="margin:7px;">
+                    <input class="btn btn-primary" ng-if="admin === 'admin'" ng-click="adminPanel()" type="button" value="Admin Panel" style="margin:7px;">
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <h4 class="user-welcome"> Welcome, {{user_name}}</h4>
+                    </li>
+                    <li>
+                        <form class="logout-btn" action="/logout" method="get">
+                            <input class="btn btn-primary btn-xs" type="submit" value="Logout">
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>Welcome, {{user_name}}</h1>
+                    <h2>Current orders in our shop:
+                        <b>{{current_orders}}</b>
+                    </h2>
+                    <h2>Current Products available:
+                        <b>{{current_products}}</b>
+                    </h2>
+                    <div ng-show="con_shop && !admin">
+                        <h2 style="color:navy;">**You have an open shopping cart</h2>
+                    </div>
+                </div>
+                <div ng-if="!admin" class="col-md-6">
+                    <div ng-show="firstBuy">
+                        <h2>Welcome for your first shopping</h2>
+                    </div>
+                    <div ng-show="!firstBuy">
+                        <h2>Orders History</h2>
+                        <ul>
+                            <li ng-repeat="order in orders">
+                                {{order.date | date:"MMM d, y" }} - {{order.totalprice | currency}} - Delivery date for {{order.deliverydate}} -
+                                <label>Download order</label>
+                                <input type="button" class="btn btn-danger btn-xs" value="click here" ng-click="fetchOrderFile(order)">
+                            </li>
+                        </ul>
+                        <h3>Your Last Order Details</h3>
+                        <ul>
+                            <li>
+                                <b>Order Date:</b>
+                                <span class="last-order">{{lastOrder.date | date:"MMM d, y"}}</span>
+                            </li>
+                            <li>
+                                <b>Shipping Date:</b>
+                                <span class="last-order">{{lastOrder.deliverydate}}</span>
+                            </li>
+                            <li>
+                                <b>Shipping address: </b>
+                                <span class="last-order">{{lastOrder.city}}, {{lastOrder.street}}</span>
+                            </li>
+                            <li>
+                                <b>Total Price:</b>
+                                <span class="last-order">{{lastOrder.totalprice | currency}}</span>
+                            </li>
+                        </ul>
+                        <small>Notice: You can download your order above the details</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

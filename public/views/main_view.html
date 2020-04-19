@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <div ng-if="!admin" class="row">
+    <div ng-repeat="product in products | filter: filterName">
+      <div class="col-md-3" all-products></div>
+    </div>
+  </div>
+  <div ng-if="admin">
+    <div ng-controller="adminCtrl">
+      <div class="col-md-5">
+        <admin-panel></admin-panel>
+      </div>
+      <div class="col-md-7" style="overflow:scroll;height: 463px;">
+        <div ng-repeat="item in items | filter: filterName">
+          <div class="col-md-6" all-products></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

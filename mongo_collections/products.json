@@ -1,0 +1,16 @@
+{"_id":{"$oid":"5a2022d7998e191be07dbfbe"},"name":"Champagne","price":8.45,"img":"http://localhost:4000/upload/wine.jpg","category":{"$oid":"5a1fd19f1f4e70b20e00b417"},"__v":0}
+{"_id":{"$oid":"5a26cbb11f11c81b74ec2768"},"name":"Sinta Steak","price":9.45,"img":"http://localhost:4000/upload/meat.jpg","category":{"$oid":"5a1fd00b1f4e70b20e00b32f"},"__v":0}
+{"_id":{"$oid":"5a26d658c9b82a1324483851"},"name":"Apples","price":2.25,"img":"http://localhost:4000/upload/apples.jpg","category":{"$oid":"5a1fd20b1f4e70b20e00b473"},"__v":0}
+{"_id":{"$oid":"5a26d6eac9b82a1324483852"},"name":"Fresh Milk Carton","price":2.35,"img":"http://localhost:4000/upload/milk.jpg","category":{"$oid":"5a1fd05d1f4e70b20e00b365"},"__v":0}
+{"_id":{"$oid":"5a3babf91ace9c9ffe2403fa"},"name":"Pack Of Burgers","price":2.35,"img":"http://localhost:4000/upload/burgers.jpg","category":{"$oid":"5a1fd00b1f4e70b20e00b32f"}}
+{"_id":{"$oid":"5a3bac4c1ace9c9ffe24047c"},"name":"Turkey Ham","price":2.35,"img":"http://localhost:4000/upload/ham.jpg","category":{"$oid":"5a1fd00b1f4e70b20e00b32f"}}
+{"_id":{"$oid":"5a3bac811ace9c9ffe2404ca"},"name":"Sausages","price":2.25,"img":"http://localhost:4000/upload/hotdog.jpg","category":{"$oid":"5a1fd00b1f4e70b20e00b32f"}}
+{"_id":{"$oid":"5a51140b51426510e0c4fb1e"},"name":"Grapes","price":1.35,"img":"http://localhost:4000/upload/grapes.jpg","category":{"$oid":"5a1fd20b1f4e70b20e00b473"},"__v":0}
+{"_id":{"$oid":"5a51143a51426510e0c4fb1f"},"name":"Carrots","price":3.4,"img":"http://localhost:4000/upload/carrots.jpg","category":{"$oid":"5a1fd20b1f4e70b20e00b473"},"__v":0}
+{"_id":{"$oid":"5a511cc551426510e0c4fb20"},"name":"Dozen Eggs","price":3.15,"img":"http://localhost:4000/upload/eggs.jpg","category":{"$oid":"5a1fd05d1f4e70b20e00b365"},"__v":0}
+{"_id":{"$oid":"5a511d4e51426510e0c4fb21"},"name":"Cucumbers","price":1.25,"img":"http://localhost:4000/upload/cucumber.jpg","category":{"$oid":"5a1fd20b1f4e70b20e00b473"},"__v":0}
+{"_id":{"$oid":"5a520e9645cc3c12f822a37f"},"name":"Water Bottles","price":1.65,"img":"http://localhost:4000/upload/water.jpg","category":{"$oid":"5a1fd19f1f4e70b20e00b417"},"__v":0}
+{"_id":{"$oid":"5a52224c45cc3c12f822a380"},"name":"Yellow Cheese","price":2.45,"img":"http://localhost:4000/upload/cheese.jpg","category":{"$oid":"5a1fd05d1f4e70b20e00b365"},"__v":0}
+{"_id":{"$oid":"5a536d3eb0eb28225044807b"},"name":"Coffee Bag","price":2.65,"img":"http://localhost:4000/upload/coffe.jpg","category":{"$oid":"5a1fd19f1f4e70b20e00b417"},"__v":0}
+{"_id":{"$oid":"5a561922c7659f2b9834ddb8"},"name":"Ice Cream","price":1.3,"img":"http://localhost:4000/upload/icecream.jpg","category":{"$oid":"5a1fd05d1f4e70b20e00b365"},"__v":0}
+{"_id":{"$oid":"5a56193ec7659f2b9834ddb9"},"name":"Mix of juices","price":2.45,"img":"http://localhost:4000/upload/juice.jpg","category":{"$oid":"5a1fd19f1f4e70b20e00b417"},"__v":0}
